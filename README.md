@@ -5,7 +5,7 @@ Proyecto de la Actividad 2 del Tema 4. Es una copia del proyecto de la Actividad
 **Alumno:** Mendoza Martínez Eduardo Yael
 
 ## Proyecto en el VPS
-- Actividad 2 (este proyecto) corre en el puerto **8083**: http://194.195.86.95:8083/detalles_info
+- Actividad 2 (este proyecto) corre en el puerto **8084**: http://194.195.86.95:8084/detalles_info
 - Actividad 1 sigue corriendo en su puerto original **8082**: http://194.195.86.95:8082/nombre
 
 ## Estructura MVC
