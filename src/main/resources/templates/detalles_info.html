@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +30,7 @@
                 <th>Puesto</th>
                 <th>Edad</th>
                 <th>Teléfono</th>
-                <th>Departamento</th>
+                <th>ID</th>
             </tr>
         </thead>
         <tbody>
@@ -45,6 +45,8 @@
             </tr>
         </tbody>
     </table>
+
+    <p>Proyecto hecho por: <span th:text="${usuario}"></span></p>
 	
 	
 </body>

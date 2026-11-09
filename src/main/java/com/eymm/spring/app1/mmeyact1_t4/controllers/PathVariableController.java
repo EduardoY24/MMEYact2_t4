@@ -3,7 +3,7 @@ package com.eymm.spring.app1.mmeyact1_t4.controllers;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eymm.spring.app1.mmeyact1_t4.models.Empleados;
+import com.eymm.spring.app1.mmeyact1_t4.models.dto.EmpleadoDTO;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,7 +40,7 @@ public class PathVariableController {
     }
 
     @PostMapping("/solicitud")
-    public Empleados creaEmple(@RequestBody Empleados empleado1){
+    public EmpleadoDTO creaEmple(@RequestBody EmpleadoDTO empleado1){
         
         return empleado1;
     }
@@ -48,10 +48,10 @@ public class PathVariableController {
     @GetMapping("/valores")
     public Map<String, Object> values(){
         Map<String, Object> json = new HashMap<>();
-        json.put("Usuario:", usuario);
-        json.put("Codigo:", codigo);
-        json.put("Mensaje:", mensaje);
-        json.put("Valores:", valores);
+        json.put("Usuario", usuario);
+        json.put("Codigo", codigo);
+        json.put("Mensaje", mensaje);
+        json.put("Valores", valores);
         return json;
     }
     

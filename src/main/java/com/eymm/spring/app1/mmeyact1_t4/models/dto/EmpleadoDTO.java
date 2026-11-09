@@ -1,10 +1,13 @@
-package com.eymm.spring.app1.mmeyact1_t4.models;
+package com.eymm.spring.app1.mmeyact1_t4.models.dto;
 
-public class Empleados {
+public class EmpleadoDTO {
 private String nombre, apellido, direccion, puesto;
 private int edad, telefono, id;
 
-public Empleados(String nombre, String apellido, String direccion, String puesto, int edad, int telefono, int id) {
+public EmpleadoDTO() {
+}
+
+public EmpleadoDTO(String nombre, String apellido, String direccion, String puesto, int edad, int telefono, int id) {
     this.nombre = nombre;
     this.apellido = apellido;
     this.direccion = direccion;
@@ -12,8 +15,8 @@ public Empleados(String nombre, String apellido, String direccion, String puesto
     this.edad = edad;
     this.telefono = telefono;
     this.id = id;
-
 }
+
 public String getNombre() {
     return nombre;
 }

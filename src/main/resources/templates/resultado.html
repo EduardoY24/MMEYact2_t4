@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleado registrado</title>
+</head>
+<body>
+    <h1>Datos recibidos</h1>
+    <ul>
+        <li><strong>Nombre:</strong> <span th:text="${empleado.nombre}"></span></li>
+        <li><strong>Apellido:</strong> <span th:text="${empleado.apellido}"></span></li>
+        <li><strong>Dirección:</strong> <span th:text="${empleado.direccion}"></span></li>
+        <li><strong>Puesto:</strong> <span th:text="${empleado.puesto}"></span></li>
+        <li><strong>Edad:</strong> <span th:text="${empleado.edad}"></span></li>
+        <li><strong>Teléfono:</strong> <span th:text="${empleado.telefono}"></span></li>
+        <li><strong>ID:</strong> <span th:text="${empleado.id}"></span></li>
+    </ul>
+    <a th:href="@{/formulario}">Registrar otro</a>
+</body>
+</html>
