@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar empleados</title>
+</head>
+<body>
+    <h1>Buscar empleados</h1>
+
+    <form th:action="@{/empleados}" method="get">
+        <input type="text" name="buscar" th:value="${buscar}" placeholder="Nombre o apellido">
+        <select name="puesto">
+            <option value="">Todos los puestos</option>
+            <option value="Secretaria" th:selected="${puesto == 'Secretaria'}">Secretaria</option>
+            <option value="Gerente" th:selected="${puesto == 'Gerente'}">Gerente</option>
+            <option value="Contador" th:selected="${puesto == 'Contador'}">Contador</option>
+            <option value="Diseñadora" th:selected="${puesto == 'Diseñadora'}">Diseñadora</option>
+            <option value="Analista" th:selected="${puesto == 'Analista'}">Analista</option>
+        </select>
+        <button type="submit">Buscar</button>
+        <a th:href="@{/empleados}">Limpiar</a>
+    </form>
+
+    <br>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Puesto</th>
+                <th>Edad</th>
+                <th>Detalle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="Empleado : ${Empleados}">
+                <td th:text="${Empleado.id}"></td>
+                <td th:text="${Empleado.nombre}"></td>
+                <td th:text="${Empleado.apellido}"></td>
+                <td th:text="${Empleado.puesto}"></td>
+                <td th:text="${Empleado.edad}"></td>
+                <td><a th:href="@{/empleado/{id}(id=${Empleado.id})}">Ver</a></td>
+            </tr>
+            <tr th:if="${Empleados.isEmpty()}">
+                <td colspan="6">No se encontraron empleados</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Proyecto hecho por: <span th:text="${usuario}"></span></p>
+</body>
+</html>
